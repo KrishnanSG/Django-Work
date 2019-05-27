@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Login</title>
+</head>
+<body>
+    <h1>Welcome to Cloud</h1>
+    <hr>
+    <form method="POST" class="login" action="login/auth">
+        {% csrf_token %}
+        <input name="uname" type="text" placeholder="Username">
+        <br><br>
+        <input name="pass" type="password" placeholder="Password">
+        <br><br>
+        <button type="submit">Login</button>
+        <a href="/create/">New User?</a>
+    </form>
+</body>
+</html>
