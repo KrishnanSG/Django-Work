@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display</title>
+</head>
+
+<body>
+    <a href="/feedpage/">Add New Image</a>
+    <p>
+        <br>
+        <ul>
+            {% for i in images %}
+            <li>{{i.caption}}</li>
+            <br>
+            <img src="../media/{{i.image_data}}" width="200">
+            <br>
+            <h4>This image was upload by {{i.user}}</h4>
+            <hr>
+            {% endfor %}
+        </ul>
+    </p>
+</body>
+
+</html>
